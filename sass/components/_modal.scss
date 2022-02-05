@@ -1,0 +1,183 @@
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  opacity: 1;
+  transition: opacity var(--timing-function);
+}
+.backdrop.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+.backdrop.is-hidden .modal {
+  transform: translate(-50%, -50%) scale(0.9);
+  opacity: 0;
+}
+.modal {
+  padding: 40px 40px;
+  position: absolute;
+  width: 528px;
+  height: 581px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  background-color: var(--beckground-color);
+  opacity: 1;
+  transition: transform var(--timing-function), opacity var(--timing-function);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+
+.modal-close {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  top: 8px;
+  right: 8px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  cursor: pointer;
+  background-color: var(--button-text-color);
+  outline: none;
+  &:focus > .modal-close_icon {
+    fill: var(--accent-color);
+  }
+  @extend %align-list;
+}
+
+.modal-text {
+  @include font(20px, bold, 1.15, 0.03em);
+  // font-weight: bold;
+  // font-size: 20px;
+  // line-height: 1.15;
+  text-align: center;
+  // letter-spacing: 0.03em;
+  margin-bottom: 12px;
+  color: var(--primary-text-color);
+}
+.modal-form {
+  display: flex;
+  flex-direction: column;
+}
+.modal-label {
+  @include font(12px, null, 1.17, 0.01em);
+  display: block;
+  // font-size: 12px;
+  // line-height: 1.17;
+  // letter-spacing: 0.01em;
+  &:not(:nth-child(4)) {
+    margin-bottom: 10px;
+  }
+}
+
+.modal-span {
+  position: relative;
+}
+.modal-span_icon {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: fill var(--timing-function);
+}
+
+.modal-input {
+  width: 100%;
+  height: 40px;
+  margin-top: 4px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  padding-left: 42px;
+  outline: none;
+  transition: border-color var(--timing-function);
+  &:focus {
+    border-color: var(--accent-color);
+  }
+  &:focus + .modal-span_icon {
+    fill: var(--accent-color);
+  }
+}
+
+.modal-textarea {
+  height: 120px;
+  resize: none;
+  padding: 12px 16px;
+  margin-bottom: 20px;
+  @include font(12px, null, 1.17, 0.01em);
+  // font-size: 12px;
+  // line-height: 1.17;
+  // letter-spacing: 0.01em;
+  color: rgba(117, 117, 117, 0.5);
+}
+.license {
+  line-height: 1.7;
+  letter-spacing: 0.03em;
+  color: var(--filter-item-color);
+  justify-content: center;
+  @extend %align-list;
+  margin-bottom: 30px;
+}
+.license span {
+  display: flex;
+}
+.license_input {
+  &:focus + .license_icon {
+    border-color: var(--accent-color);
+  }
+  &:checked + .license_icon {
+    background-color: var(--accent-color);
+    border: none;
+  }
+  &:checked + .license_icon .license_icon--svg {
+    fill: var(--button-text-color);
+  }
+}
+
+.license_icon {
+  fill: transparent;
+  margin-right: 9px;
+  border: 2px solid var(--primary-text-color);
+  border-radius: 2px;
+}
+
+.license_link {
+  line-height: 1.7;
+  letter-spacing: 0.03em;
+  color: var(--accent-color);
+}
+.modal-button {
+  width: 200px;
+  height: 50px;
+  @include font(16px, null, 1.88, 0.06em);
+  // font-size: 16px;
+  // line-height: 1.88;
+  // letter-spacing: 0.06em;
+  color: var(--button-text-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  background-color: var(--accent-color);
+  cursor: pointer;
+  border: none;
+}
+.button-title {
+  display: block;
+  margin: 0 auto;
+  box-shadow: none;
+  transition: box-shadow var(--timing-function);
+  &:hover,
+  &:focus {
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  }
+}
+
+.modal-close_icon {
+  width: 18px;
+  height: 18px;
+  transition: fill var(--timing-function);
+  display: flex;
+  justify-content: center;
+}

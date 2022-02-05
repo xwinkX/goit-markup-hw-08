@@ -1,0 +1,25 @@
+.classes-list {
+  display: flex;
+  margin-top: 50px;
+  & .classes-list_item:not(:last-child) {
+    margin-right: 30px;
+  }
+}
+
+.classes-images {
+  position: relative;
+}
+.classes-images_text {
+  position: absolute;
+
+  color: var(--beckground-color);
+  background-color: rgba(47, 48, 58, 0.8);
+  justify-content: center;
+  @extend %align-list;
+  width: 370px;
+  height: 70px;
+  bottom: 0px;
+}
+.classes {
+  padding-top: 0;
+}

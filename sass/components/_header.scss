@@ -1,0 +1,92 @@
+.nav {
+  display: flex;
+}
+.header_container {
+  @extend %align-list;
+}
+.nav__site-nav {
+  display: flex;
+  margin-left: 93px;
+  & .nav__item:not(:last-child) {
+    margin-right: 50px;
+  }
+}
+
+.nav__link {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  color: var(--primary-text-color);
+  @include font(null, 500, 1.14, 0.02em);
+  // font-weight: 500;
+  // line-height: 1.14;
+  // letter-spacing: 0.02em;
+  text-decoration: none;
+  transition: color var(--timing-function);
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
+  position: relative;
+  &::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 4px;
+    background-color: var(--accent-color);
+    border-radius: 2px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    opacity: 0;
+  }
+  &:hover::after {
+    opacity: 1;
+  }
+}
+
+.connect {
+  display: flex;
+  margin-left: auto;
+}
+.connect .connect-item + .connect-item {
+  margin-left: 50px;
+}
+
+.connect-item_link {
+  color: var(--text-color);
+  @include font(null, 500, 1.14, 0.02em);
+  // font-weight: 500;
+  // line-height: 1.14;
+  // letter-spacing: 0.02em;
+  text-decoration: none;
+  @extend %align-list;
+  transition: color var(--timing-function);
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
+  &:hover .connect-item_link_icon,
+  &:focus .connect-item_link_icon {
+    fill: var(--accent-color);
+  }
+}
+
+.current {
+  color: var(--accent-color);
+  &::after {
+    opacity: 1;
+  }
+}
+
+.connect-item_link_icon {
+  width: 10px;
+  height: 16px;
+  margin-right: 10px;
+  fill: var(--text-color);
+  transition: fill var(--timing-function);
+}
+.connect-item_link_icon--mail {
+  width: 16px;
+  height: 12px;
+}

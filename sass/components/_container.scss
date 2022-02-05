@@ -1,0 +1,21 @@
+.container {
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.container-header {
+  @extend %align-list;
+}
+.container-hero {
+  
+  flex-direction: column;
+  @extend %align-list;
+  width: 696px;
+}
+.container-portfolio {
+ 
+  flex-direction: column;
+  @extend %align-list;
+}

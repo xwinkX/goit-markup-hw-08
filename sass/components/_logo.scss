@@ -1,0 +1,20 @@
+.logo {
+  color: var(--primary-text-color);
+  margin: auto;
+}
+.logo--two {
+  color: var(--accent-color);
+}
+.logo--three {
+  color: var(--logo-color);
+}
+.logo,
+.logo--two,
+.logo--three {
+  font-family: Raleway, sans-serif;
+  @include font(26px, bold, 1.2, null);
+  // font-weight: bold;
+  // font-size: 26px;
+  // line-height: 1.2;
+  text-decoration: none;
+}
