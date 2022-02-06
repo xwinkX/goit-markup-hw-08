@@ -1,21 +1,25 @@
 .container {
-  width: 1200px;
+  width: 100%;
   padding-left: 15px;
   padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
+  @media screen and (min-width: 480px) {
+    width: 480px;
+  }
+  @media screen and (min-width: 768px) {
+    width: 768px;
+  }
 }
 .container-header {
   @extend %align-list;
 }
 .container-hero {
-  
   flex-direction: column;
   @extend %align-list;
   width: 696px;
 }
 .container-portfolio {
- 
   flex-direction: column;
   @extend %align-list;
 }

@@ -1,7 +1,8 @@
 .icon {
   display: flex;
   justify-content: center;
-  width: 270px;
+  // width: 270px;
+  width: 100%;
 }
 
 .icon-item:not(:last-child) {
