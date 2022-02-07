@@ -2,25 +2,27 @@
   font-style: normal;
 }
 .adres_real {
-  margin-bottom: 9px;
+  // margin-bottom: 9px;
+  margin-bottom: 8px;
   a {
     color: var(--button-text-color);
   }
 }
 .adres_mail {
-  margin-bottom: 9px;
+  // margin-bottom: 9px;
+  margin-bottom: 8px;
+  text-align: center;
 }
 .adres_real--link {
   color: var(--beckground-color);
   @include font(null, null, 1.8, 0.02em);
   text-decoration: none;
-  // line-height: 1.7;
-  // letter-spacing: 0.03em;
   transition: color var(--timing-function);
   &:hover,
   &:focus {
     color: var(--accent-color);
   }
+  text-align: center;
 }
 .adres-link {
   color: var(--adress-color);
@@ -33,4 +35,8 @@
   &:focus {
     color: var(--accent-color);
   }
+}
+.adres_tel {
+  text-align: center;
+  margin-bottom: 60px;
 }
