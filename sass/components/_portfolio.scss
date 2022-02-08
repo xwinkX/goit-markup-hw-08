@@ -1,24 +1,34 @@
 .portfolio-button {
   display: flex;
+  flex-wrap: wrap;
   width: 100%;
-  margin-bottom: 50px;
-  justify-content: center;
+  margin-bottom: 40px;
+  @media screen and (min-width: 768px) {
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+  @media screen and (min-width: 768px) {
+    margin-bottom: 50px;
+  }
 }
-
 .portfolio-button_item {
   &:not(:last-child) {
     margin-right: 8px;
   }
+  &:nth-last-child(-n + 2) {
+    margin-top: 15px;
+  }
+  @media screen and (min-width: 768px) {
+    &:nth-last-child(-n + 2) {
+      margin-top: 0;
+    }
+  }
 }
-
 .button-filter {
   color: var(--primary-text-color);
   background-color: var(--button-color);
   font-family: inherit;
   @include font(16px, 500, 1.6, null);
-  // font-weight: 500;
-  // font-size: 16px;
-  // line-height: 1.6;
   cursor: pointer;
   padding: 6px 22px;
   border-color: transparent;
@@ -45,22 +55,45 @@ img {
 }
 
 .filter {
-  box-sizing: border-box;
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
+    @media screen and (min-width: 768px) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    &:not(:last-child) {
+      justify-content: center;
+    }
+  }
+
+  // flex-wrap: wrap;
 }
 .filter-element {
-  width: calc((100% - 60px) / 3);
-  margin-right: 30px;
-  margin-bottom: 30px;
+  // width: calc((100% - 60px) / 3);
+  // margin-right: 30px;
+  // margin-bottom: 30px;
   border: 1px solid #eeeeee;
-  &:nth-child(3n) {
-    margin-right: 0;
+  &:not(:last-child) {
+    margin-bottom: 30px;
   }
-  &:nth-last-child(-n + 3) {
-    margin-bottom: 0;
+  @media screen and (min-width: 768px) {
+    width: calc((100% - 30px) / 2);
+    justify-content: center;
+    &:nth-child(2n + 1) {
+      margin-right: 30px;
+    }
+    @media screen and (min-width: 1200px) {
+      width: calc((100% - 60px) / 3);
+      margin-right: 30px;
+      margin-bottom: 30px;
+      &:nth-child(3n) {
+        margin-right: 0;
+      }
+      &:nth-last-child(-n + 3) {
+        margin-bottom: 0;
+      }
+    }
   }
-}
+ 
 .filter-element_link {
   transition: box-shadow var(--timing-function);
   &:hover {
@@ -80,17 +113,10 @@ img {
 .filter-title {
   color: var(--filter-color);
   @include font(18px, bold, 2, 0.06em);
-  // font-size: 18px;
-  // font-weight: bold;
-  // line-height: 2;
-  // letter-spacing: 0.06em;
   margin-bottom: 4px;
 }
 .filter-item {
   @include font(16px, 500, 1.88, 0.03em);
-  // font-size: 16px;
-  // line-height: 1.88;
-  // letter-spacing: 0.03em;
   color: var(--filter-item-color);
 }
 
@@ -125,9 +151,6 @@ img {
   left: 50%;
   transform: translate(-50%, -50%);
   @include font(18px, null, 1.56, 0.03em);
-  // font-size: 18px;
-  // line-height: 1.56;
-  // letter-spacing: 0.03em;
   color: var(--button-text-color);
   opacity: 0;
   transition: opacity var(--timing-function);
