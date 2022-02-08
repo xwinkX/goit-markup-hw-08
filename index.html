@@ -82,19 +82,40 @@
     <ul class="classes-list">
                 <li class="classes-list_item" >
             <div class="classes-images">
-                <img  src="./images/img1.jpg" alt="Робота с компьютером" width="370"/>
+                <img  
+                srcset="
+             ./images/img1.jpg 1x,
+             ./images/img1-2x.jpg 2x
+             "
+                src="./images/img1.jpg" 
+                alt="Робота с компьютером" 
+                width="370"/>
                  <p class="classes-images_text">ДЕСКТОПНЫЕ ПРИЛОЖЕНИЯ</p>
             </div>
     </li>
         <li class="classes-list_item">
             <div class="classes-images">
-             <img src="./images/img2.jpg" alt="Робота с телефоном" width="370"/>
+             <img 
+             srcset="
+             ./images/img2.jpg 1x,
+             ./images/img2-2x.jpg 2x
+             "
+             src="./images/img2.jpg" 
+             alt="Робота с телефоном" 
+             width="370"/>
              <p class="classes-images_text">МОБИЛЬНЫЕ ПРИЛОЖЕНИЯ</p>
     </div>
     </li>
          <li class="classes-list_item">
             <div class="classes-images">
-            <img src="./images/img3.jpg" alt="Робота с планшетом" width="370"/>
+            <img 
+            srcset="
+             ./images/img3.jpg 1x,
+             ./images/img3-2x.jpg 2x
+             "
+            src="./images/img3.jpg" 
+            alt="Робота с планшетом" 
+            width="370"/>
             <p class="classes-images_text">ДЕЗАЙНЕРСКИЕ РЕШЕНИЯ</p>
         </div>
         </li>
@@ -105,7 +126,33 @@
     <h2 class="title">Наша команда</h2>
         <ul class="command-list">
         <li  class="command-list_item">
-            <img src="./images/face1.jpg" alt="Участник 1" width="270"/>
+            <!-- <img 
+                src="./images/face1.jpg" 
+                alt="Участник 1" 
+                width="270"/> -->
+            <picture>
+                <source
+                srcset="
+             ./images/face1.jpg 1x,
+             ./images/face1-2x.jpg 2x
+             "
+               media="(min-width: 1200px)"
+             />
+            <source 
+            srcset="
+                         ./images/face1-tab-1x.jpg 1x,
+                         ./images/face1-tab-2x.jpg 2x
+                         " media="(min-width: 768px)" 
+                         />
+                        <source srcset="
+                                            ./images/face1-mob-1x.jpg 1x,
+                                            ./images/face1-mob-2x.jpg 2x
+                                            " media="(min-width: 320px)" 
+                                            />
+                                            <img src="./images/face1.jpg" 
+                                            alt="Участник 1"/>
+                         
+            </picture>
             <div class="participant">
             <h3 class="participant-name">Игорь Демьяненко</h3>
             <p class="participant-profession">Product Designer</p>
@@ -141,7 +188,23 @@
             </ul>
              </div>
         </li>
-        <li class="command-list_item"><img src="./images/face2.jpg" alt="Участник 2" width="270"/>
+        <li class="command-list_item">
+            <!-- <img src="./images/face2.jpg" alt="Участник 2" width="270"/> -->
+            <picture>
+                <source srcset="
+                         ./images/face2.jpg 1x,
+                         ./images/face2-2x.jpg 2x
+                         " media="(min-width: 1200px)" />
+                <source srcset="
+                                     ./images/face2-tab-1x.jpg 1x,
+                                     ./images/face2-tab-2x.jpg 2x
+                                     " media="(min-width: 768px)" />
+                <source srcset="
+                                                        ./images/face2-mob-1x.jpg 1x,
+                                                        ./images/face2-mob-2x.jpg 2x
+                                                        " media="(min-width: 320px)" />
+                <img src="./images/face2.jpg" alt="Участник 1" />
+             </picture>
             <div class="participant">
             <h3 class="participant-name">Ольга Репина</h3>
             <p class="participant-profession">Frontend Developer</p>
@@ -177,7 +240,24 @@
             </ul>
         </div>
         </li>
-        <li class="command-list_item"><img src="./images/face3.jpg" alt="Участник 3" width="270"/>
+        <li class="command-list_item">
+            <!-- <img src="./images/face3.jpg" alt="Участник 3" width="270"/> -->
+            <picture>
+                <source srcset="
+                         ./images/face3.jpg 1x,
+                         ./images/face3-2x.jpg 2x
+                         " media="(min-width: 1200px)" />
+                <source srcset="
+                                     ./images/face3-tab-1x.jpg 1x,
+                                     ./images/face3-tab-2x.jpg 2x
+                                     " media="(min-width: 768px)" />
+                <source srcset="
+                                                        ./images/face3-mob-1x.jpg 1x,
+                                                        ./images/face3-mob-2x.jpg 2x
+                                                        " media="(min-width: 320px)" />
+                <img src="./images/face3.jpg" alt="Участник 1" />
+            
+            </picture>
             <div class="participant">
             <h3 class="participant-name">Николай Тарасов</h3>
             <p class="participant-profession">Marketing</p>
@@ -213,7 +293,24 @@
             </ul>
         </div>
         </li>
-        <li class="command-list_item"><img src="./images/face4.jpg" alt="Участник 4" width="270"/>
+        <li class="command-list_item">
+            <!-- <img src="./images/face4.jpg" alt="Участник 4" width="270"/> -->
+            <picture>
+                <source srcset="
+                         ./images/face4.jpg 1x,
+                         ./images/face4-2x.jpg 2x
+                         " media="(min-width: 1200px)" />
+                <source srcset="
+                                     ./images/face4-tab-1x.jpg 1x,
+                                     ./images/face4-tab-2x.jpg 2x
+                                     " media="(min-width: 768px)" />
+                <source srcset="
+                                                        ./images/face4-mob-1x.jpg 1x,
+                                                        ./images/face4-mob-2x.jpg 2x
+                                                        " media="(min-width: 320px)" />
+                <img src="./images/face4.jpg" alt="Участник 1" />
+            
+            </picture>
             <div class="participant">
             <h3 class="participant-name">Михаил Ермаков</h3>
             <p class="participant-profession">UI Designer</p>
