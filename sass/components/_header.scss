@@ -5,7 +5,8 @@
   @extend %align-list;
 }
 .nav__site-nav {
-  display: flex;
+  // display: flex;
+  display: none;
   margin-left: 93px;
   & .nav__item:not(:last-child) {
     margin-right: 50px;
@@ -18,9 +19,6 @@
   padding-bottom: 32px;
   color: var(--primary-text-color);
   @include font(null, 500, 1.14, 0.02em);
-  // font-weight: 500;
-  // line-height: 1.14;
-  // letter-spacing: 0.02em;
   text-decoration: none;
   transition: color var(--timing-function);
   &:hover,
@@ -46,7 +44,8 @@
 }
 
 .connect {
-  display: flex;
+  // display: flex;
+  display: none;
   margin-left: auto;
 }
 .connect .connect-item + .connect-item {
@@ -56,9 +55,6 @@
 .connect-item_link {
   color: var(--text-color);
   @include font(null, 500, 1.14, 0.02em);
-  // font-weight: 500;
-  // line-height: 1.14;
-  // letter-spacing: 0.02em;
   text-decoration: none;
   @extend %align-list;
   transition: color var(--timing-function);
@@ -89,4 +85,14 @@
 .connect-item_link_icon--mail {
   width: 16px;
   height: 12px;
+}
+.menu-open-btn {
+  background-color: var(--beckground-color);
+  border: none;
+  margin-left: auto;
+}
+.icon-menu {
+  width: 40px;
+  height: 40px;
+  background-color: var(--beckground-color);
 }

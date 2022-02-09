@@ -1,0 +1,44 @@
+.mob-menu {
+  position: fixed;
+  background-color: var(--beckground-color);
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  padding-top: 48px;
+  padding-bottom: 48px;
+  padding-left: 40px;
+}
+.mob-menu-nav__site {
+  & .mob-menu-nav__item:not(:last-child) {
+    margin-bottom: 32px;
+  }
+  padding-bottom: 302px;
+}
+.mob-menu-close-btn {
+  display: block;
+  margin-left: auto;
+  border: none;
+  background-color: var(--beckground-color);
+  padding: 0;
+  width: 40px;
+  height: 40px;
+}
+
+.mob-menu-close_icon {
+  width: 19px;
+  height: 19px;
+}
+.mob-social-link {
+  display: flex;
+}
+.mob-connect {
+  & .mob-connect-item:not(:last-child) {
+    margin-bottom: 32px;
+  }
+  padding-bottom: 64px;
+}
+.mob-menu-nav__link {
+  @include font(40px, 500, 1.18, 0.02em);
+  color: var(--primary-text-color);
+}

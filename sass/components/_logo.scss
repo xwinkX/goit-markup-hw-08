@@ -12,9 +12,9 @@
 .logo--two,
 .logo--three {
   font-family: Raleway, sans-serif;
-  @include font(26px, bold, 1.2, null);
-  // font-weight: bold;
-  // font-size: 26px;
-  // line-height: 1.2;
+  // @include font(26px, bold, 1.2, null);
+  @include font(24px, bold, 1.2, 0.03em);
   text-decoration: none;
+  padding-top: 16px;
+  padding-bottom: 16px;
 }
