@@ -8,7 +8,9 @@
   padding-top: 48px;
   padding-bottom: 48px;
   padding-left: 40px;
+  z-index: 1;
 }
+
 .mob-menu-nav__site {
   & .mob-menu-nav__item:not(:last-child) {
     margin-bottom: 32px;
@@ -16,20 +18,20 @@
   padding-bottom: 302px;
 }
 .mob-menu-close-btn {
+  position: absolute;
   display: block;
   margin-left: auto;
   border: none;
   background-color: var(--beckground-color);
-  padding: 0;
-  width: 40px;
-  height: 40px;
+  right: 25px;
+  top: 21px;
 }
 
 .mob-menu-close_icon {
-  width: 19px;
-  height: 19px;
+  width: 40px;
+  height: 40px;
 }
-.mob-social-link {
+.mob-social-list {
   display: flex;
 }
 .mob-connect {
@@ -41,4 +43,16 @@
 .mob-menu-nav__link {
   @include font(40px, 500, 1.18, 0.02em);
   color: var(--primary-text-color);
+}
+.mob-connect-item_link {
+  @include font(34px, 500, 1.18, 0.02em);
+  color: var(--accent-color);
+}
+.mob-connect-item_link--tel {
+  @include font(24px, 500, 1.17, 0.02em);
+  color: var(--text-color);
+}
+.mob-social-list__link {
+  @include font(18px, 500, 1.2, 0.02em);
+  color: var(--accent-color);
 }
