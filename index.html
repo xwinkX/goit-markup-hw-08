@@ -35,14 +35,16 @@
                             <use href="./images/sprite.svg#icon-hover2"></use>
                         </svg>+38 099 111 11 11</a></li>
             </ul>
-            <button type="button" class="menu-open-btn">
+            <button type="button" class="menu-open-btn" data-menu-open>
                  <svg class="icon-menu">
                      <use href="./images/sprite.svg#icon-menu"></use>
                  </svg>
                  </button>
         </div>
-            <div class="mob-menu container">
-            <button type="button" class="mob-menu-close-btn">
+            <div class="mob-menu is-hidden" data-menu>
+                <div class="container mob-menu-container">
+                <div class="mob-menu-top">
+            <button type="button" class="mob-menu-close-btn" data-menu-close>
             <svg class="mob-menu-close_icon" >
                 <use class="mob-menu-close_icon--use" href="./images/sprite.svg#icon-close-mob-menu" ></use>
             </svg>
@@ -52,27 +54,29 @@
             <li class="mob-menu-nav__item"><a href="./portfolio.html" class="mob-menu-nav__link">Портфолио</a></li>
             <li class="mob-menu-nav__item"><a href="" class="mob-menu-nav__link">Контакты</a></li>
         </ul>
+        </div>
+        <div class="mob-menu-bottom">
         <ul class="mob-connect">
                      
-            <li class="mob-connect-item"><a href="tel:+380991111111" class="mob-connect-item_link mob-connect-item_link--tel">+38 099 111 11 11</a></li>
-            <li class="mob-connect-item"><a href="mailto:info@devstudio.com" class="mob-connect-item_link">info@devstudio.com</a>
+            <li class="mob-connect-item"><a href="tel:+380991111111" class="mob-connect-item_link">+38 099 111 11 11</a></li>
+            <li class="mob-connect-item"><a href="mailto:info@devstudio.com" class="mob-connect-item_link mob-connect-item_link--email">info@devstudio.com</a>
             </li>
         </ul>
         <ul class="mob-social-list">
-        <li >
+        <li class="mob-social-item">
             <a href="" class="mob-social-list__link"
             target="_blank"
             rel="noopener noreferrer">
             Instagram
         </a>
-        
-        </li>
-        <li>
+         </li>
+       
+        <li class="mob-social-item">
             <a href="" class="mob-social-list__link" target="_blank" rel="noopener noreferrer">
                 Twitter
             </a>
         </li>
-        <li>
+        <li class="mob-social-item">
             <a href="" class="mob-social-list__link" target="_blank" rel="noopener noreferrer">
                 Facebook
             </a>
@@ -83,6 +87,8 @@
             </a>
         </li>
     </ul>
+    </div>
+        </div>
         </div>
         </header> 
     <main>
@@ -174,10 +180,6 @@
     <h2 class="title">Наша команда</h2>
         <ul class="command-list">
         <li  class="command-list_item">
-            <!-- <img 
-                src="./images/face1.jpg" 
-                alt="Участник 1" 
-                width="270"/> -->
             <picture>
                 <source
                 srcset="
@@ -577,6 +579,7 @@
     </div>
     
     </div>
-    <script src="./js/modal.js"></script> -->
+    <script src="./js/modal.js"></script> 
+    <script src="./js/menu.js"></script>
 </body>
 </html>

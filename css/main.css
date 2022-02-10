@@ -1284,8 +1284,11 @@ img {
   z-index: 1;
 }
 
-.mob-menu-nav__site {
-  padding-bottom: 302px;
+.mob-menu-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .mob-menu-nav__site .mob-menu-nav__item:not(:last-child) {
@@ -1309,6 +1312,10 @@ img {
 
 .mob-social-list {
   display: flex;
+}
+
+.mob-social-list :not(:last-child) {
+  margin-right: 10px;
 }
 
 .mob-connect {
@@ -1335,7 +1342,7 @@ img {
   color: var(--accent-color);
 }
 
-.mob-connect-item_link--tel {
+.mob-connect-item_link--email {
   font-size: 24px;
   font-weight: 500;
   line-height: 1.17;
@@ -1349,5 +1356,10 @@ img {
   line-height: 1.2;
   letter-spacing: 0.02em;
   color: var(--accent-color);
+}
+
+.mob-social-item {
+  border-right: 1px solid rgba(33, 33, 33, 0.2);
+  padding-right: 10px;
 }
 /*# sourceMappingURL=main.css.map */
