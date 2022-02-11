@@ -1,3 +1,6 @@
+.header-portfolio {
+  border-bottom: 1px solid #ececec;
+}
 .nav {
   display: flex;
 }
@@ -86,7 +89,7 @@
   }
 }
 
-.current {
+a.current {
   color: var(--accent-color);
   &::after {
     opacity: 1;

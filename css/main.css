@@ -68,6 +68,10 @@ body {
   margin: -1px;
 }
 
+.header-portfolio {
+  border-bottom: 1px solid #ececec;
+}
+
 .nav {
   display: flex;
 }
@@ -174,11 +178,11 @@ body {
   fill: var(--accent-color);
 }
 
-.current {
+a.current {
   color: var(--accent-color);
 }
 
-.current::after {
+a.current::after {
   opacity: 1;
 }
 
