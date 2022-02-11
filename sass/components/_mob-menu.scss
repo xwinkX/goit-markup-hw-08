@@ -9,6 +9,7 @@
   padding-bottom: 48px;
   padding-left: 40px;
   z-index: 1;
+  transition: left var(--timing-function), visibility var(--timing-function);
 }
 .mob-menu-container {
   height: 100%;
@@ -16,10 +17,20 @@
   flex-direction: column;
   justify-content: space-between;
 }
+.mob-menu.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+  left: 100%;
+}
 
 .mob-menu-nav__site {
   & .mob-menu-nav__item:not(:last-child) {
     margin-bottom: 32px;
+  }
+}
+.menu-open-btn {
+  @media screen and (min-width: 768px) {
+    display: none;
   }
 }
 .mob-menu-close-btn {
@@ -30,6 +41,13 @@
   background-color: var(--beckground-color);
   right: 25px;
   top: 21px;
+  width: 40px;
+  height: 40px;
+  background-color: var(--beckground-color);
+  &:hover,
+  &:focus {
+    fill: var(--accent-color);
+  }
 }
 
 .mob-menu-close_icon {

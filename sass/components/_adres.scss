@@ -15,7 +15,7 @@
 }
 .adres_real--link {
   color: var(--beckground-color);
-  @include font(null, null, 1.8, 0.02em);
+  @include font(null, null, 1.7, 0.03em);
   text-decoration: none;
   transition: color var(--timing-function);
   &:hover,

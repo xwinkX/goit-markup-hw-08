@@ -5,11 +5,13 @@
   @extend %align-list;
 }
 .nav__site-nav {
-  // display: flex;
   display: none;
   margin-left: 93px;
   & .nav__item:not(:last-child) {
     margin-right: 50px;
+  }
+  @media screen and (min-width: 768px) {
+    display: flex;
   }
 }
 
@@ -44,12 +46,28 @@
 }
 
 .connect {
-  // display: flex;
   display: none;
   margin-left: auto;
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    & :not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
+  @media screen and (min-width: 1200px) {
+    flex-direction: row;
+    & :not(:last-child) {
+      margin-right: 30px;
+      margin-bottom: 0;
+    }
+  }
 }
 .connect .connect-item + .connect-item {
   margin-left: 50px;
+  @media screen and (min-width: 768px) {
+    margin-left: 0;
+  }
 }
 
 .connect-item_link {
@@ -95,4 +113,8 @@
   width: 40px;
   height: 40px;
   background-color: var(--beckground-color);
+  &:hover,
+  &:focus {
+    fill: var(--accent-color);
+  }
 }

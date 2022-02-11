@@ -34,10 +34,14 @@
   }
 }
 .work-title {
-  @include font(null, null, 0.88, 0.03em);
+  @include font(null, null, 1.14, 0.03em);
   color: var(--primary-text-color);
   text-transform: uppercase;
   margin-bottom: 10px;
+  text-align: center;
+  @media screen and (min-width: 768px) {
+    text-align: left;
+  }
 }
 .work-text {
   @include font(null, null, 1.7, 0.03em);

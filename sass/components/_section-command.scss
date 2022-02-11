@@ -54,10 +54,6 @@
   color: var(--primary-text-color);
   background-color: var(--button-text-color);
   @include font(16px, 500, 1.19, 0.03em);
-
-  @media screen and (min-width: 768px) {
-    @include font(null, null, 0.8, null);
-  }
   text-align: center;
 }
 .participant-profession {
