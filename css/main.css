@@ -663,7 +663,7 @@ a.current::after {
 }
 
 .client-list-item_link {
-  width: 210px;
+  width: 100%;
   height: 92px;
   border: 1px solid #afb1b8;
   box-sizing: border-box;
@@ -740,7 +740,6 @@ a.current::after {
 @media screen and (min-width: 1200px) {
   .footer-section-list {
     margin-right: 70px;
-    align-items: flex-start;
   }
 }
 
@@ -807,6 +806,12 @@ a.current::after {
   text-align: center;
 }
 
+@media screen and (min-width: 1200px) {
+  .footer-section-list_logo {
+    text-align: start;
+  }
+}
+
 .adres {
   font-style: normal;
 }
@@ -822,6 +827,12 @@ a.current::after {
 .adres_mail {
   margin-bottom: 8px;
   text-align: center;
+}
+
+@media screen and (min-width: 1200px) {
+  .adres_mail {
+    text-align: start;
+  }
 }
 
 .adres_real--link {
@@ -854,11 +865,18 @@ a.current::after {
   margin-bottom: 60px;
 }
 
+@media screen and (min-width: 1200px) {
+  .adres_tel {
+    text-align: start;
+    margin-bottom: 0;
+  }
+}
+
 .email-form_input {
   border: 1px solid rgba(255, 255, 255, 0.3);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
-  width: 358px;
+  width: 100%;
   height: 50px;
   background-color: var(--hero-color);
   font-size: 16px;

@@ -12,6 +12,9 @@
   // margin-bottom: 9px;
   margin-bottom: 8px;
   text-align: center;
+  @media screen and (min-width: 1200px) {
+    text-align: start;
+  }
 }
 .adres_real--link {
   color: var(--beckground-color);
@@ -28,9 +31,7 @@
   color: var(--adress-color);
   text-decoration: none;
   @include font(null, null, 1.7, 0.03em);
-  // line-height: 1.7;
-  // letter-spacing: 0.03em;
-  transition: color var(--timing-function);
+   transition: color var(--timing-function);
   &:hover,
   &:focus {
     color: var(--accent-color);
@@ -39,4 +40,8 @@
 .adres_tel {
   text-align: center;
   margin-bottom: 60px;
+  @media screen and (min-width: 1200px) {
+    text-align: start;
+    margin-bottom: 0;
+  }
 }
