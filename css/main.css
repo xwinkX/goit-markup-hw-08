@@ -740,6 +740,7 @@ a.current::after {
 @media screen and (min-width: 1200px) {
   .footer-section-list {
     margin-right: 70px;
+    align-items: flex-start;
   }
 }
 
