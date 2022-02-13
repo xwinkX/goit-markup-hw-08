@@ -9,6 +9,12 @@
   color: var(--adress-color);
   outline: none;
   padding-left: 16px;
+  @media screen and (min-width: 480px) {
+    width: 450px;
+  }
+  @media screen and (min-width: 1200px) {
+    width: 358px;
+  }
 }
 .email {
   display: flex;
